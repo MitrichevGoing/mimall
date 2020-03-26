@@ -17,14 +17,14 @@ module.exports = {
     devServer: {
         host: 'localhost',
         port: 8080,
-        // proxy: {
-        //     '/api': {
-        //         target: '',
-        //         changeOrigin: true,
-        //         pathRewrite: {
-        //             '/api': ''
-        //         }
-        //     }
-        // }
+        proxy: {
+            '/api': {
+                target: 'http://mock.jiketravel.com/mock/5e799906c8f12311082cb31b',
+                changeOrigin: true,
+                pathRewrite: {
+                    '/api': ''
+                }
+            }
+        }
     }
 }
